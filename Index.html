@@ -130,12 +130,13 @@
       border:0;
     }
 
-    /* SECTION SPACING FIXES */
-    #about{margin-top:40px}
-    #highlights{margin-top:70px}
-    #gallery{margin-top:80px}
-    #location{margin-top:80px}
-    footer{margin-top:90px}
+    /* SECTION SPACING */
+    #about{margin-top:60px}
+    #highlights{margin-top:90px}
+    #gallery{margin-top:100px}
+    #location{margin-top:100px}
+    #lead-form{margin-top:120px}
+    footer{margin-top:120px}
 
     h2{margin-bottom:42px}
 
@@ -151,7 +152,7 @@
       background:var(--card);
       border:1px solid var(--border);
       border-radius:22px;
-      padding:28px;
+      padding:32px;
       opacity:0;
       transform:translateY(30px);
       transition:.6s ease;
@@ -159,7 +160,7 @@
 
     .card.show{opacity:1;transform:translateY(0)}
 
-    .card h3{margin-bottom:10px;font-size:18px}
+    .card h3{margin-bottom:12px;font-size:18px}
     .card p{color:var(--muted);font-size:14px}
 
     /* STATS */
@@ -167,7 +168,7 @@
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
       gap:28px;
-      margin-top:60px;
+      margin-top:70px;
     }
 
     .stat{
@@ -213,31 +214,16 @@
       transform:translateY(0);
     }
 
-    /* FAQ */
-    .faq{
-      display:grid;
-      gap:18px;
-      max-width:900px;
-      margin:auto;
-    }
-
-    .faq details{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:18px;
-      padding:20px;
-    }
-
-    .faq summary{cursor:pointer;font-weight:500}
-    .faq p{margin-top:10px;color:var(--muted);font-size:14px}
-
     /* MAP */
+    .map{
+      margin-top:70px;
+    }
+
     .map iframe{
       width:100%;
       height:380px;
       border-radius:24px;
       border:1px solid var(--border);
-      margin-top:60px;
     }
 
     /* FOOTER */
@@ -320,12 +306,12 @@
   <a href="#highlights" onclick="closeMenu()">Highlights</a>
   <a href="#gallery" onclick="closeMenu()">Gallery</a>
   <a href="#location" onclick="closeMenu()">Location</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#lead-form" onclick="closeMenu()">Contact</a>
 </div>
 
 <section class="hero container">
   <h1>Premium Low-Density Homes in Panchkula</h1>
-  <p>Luxury residences designed for privacy, greenery and long-term investment value.</p>
+  <p>Luxury residences crafted for privacy, greenery, and long-term investment security.</p>
 
   <div class="video-wrap">
     <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
@@ -335,14 +321,24 @@
 </section>
 
 <section id="about" class="container">
+  <h2>About Trident Hills</h2>
+
   <div class="cards">
     <div class="card reveal">
-      <h3>About Trident Hills</h3>
-      <p>A premium residential development focused on space, exclusivity and modern urban comfort.</p>
+      <h3>Designed for Premium Living</h3>
+      <p>
+        Trident Hills is a thoughtfully planned residential development that prioritizes space,
+        privacy, and comfort. With low-density planning and expansive green zones, it offers a
+        refined lifestyle away from congestion.
+      </p>
     </div>
+
     <div class="card reveal">
-      <h3>Investment Value</h3>
-      <p>Strong appreciation potential driven by location, infrastructure and future-ready planning.</p>
+      <h3>Strong Investment Potential</h3>
+      <p>
+        Strategically located in Panchkula, the project benefits from rapid infrastructure growth,
+        limited inventory, and premium demand—making it ideal for both end-users and investors.
+      </p>
     </div>
   </div>
 
@@ -357,9 +353,9 @@
 <section id="highlights" class="container">
   <h2>Project Highlights</h2>
   <div class="cards">
-    <div class="card reveal"><p>Low-density planning ensuring privacy and peaceful living.</p></div>
-    <div class="card reveal"><p>Modern amenities including clubhouse, wellness zones and landscaped greens.</p></div>
-    <div class="card reveal"><p>Advanced security, power backup and smart infrastructure.</p></div>
+    <div class="card reveal"><p>Low-density planning ensuring peace, privacy, and exclusivity.</p></div>
+    <div class="card reveal"><p>Clubhouse, wellness zones, landscaped greens, and lifestyle amenities.</p></div>
+    <div class="card reveal"><p>High-end security systems, power backup, and smart infrastructure.</p></div>
   </div>
 </section>
 
@@ -375,30 +371,26 @@
 <section id="location" class="container">
   <h2>Location Advantages</h2>
   <div class="cards">
-    <div class="card reveal"><p>Excellent connectivity to Chandigarh and major highways.</p></div>
-    <div class="card reveal"><p>Close to schools, hospitals and daily conveniences.</p></div>
-    <div class="card reveal"><p>Surrounded by green belts and low-congestion zones.</p></div>
+    <div class="card reveal"><p>Seamless connectivity to Chandigarh and major highways.</p></div>
+    <div class="card reveal"><p>Close proximity to schools, hospitals, and daily conveniences.</p></div>
+    <div class="card reveal"><p>Surrounded by green belts and low-congestion neighborhoods.</p></div>
   </div>
 
   <div class="map">
     <iframe src="https://www.google.com/maps?q=Panchkula,Haryana&output=embed"></iframe>
   </div>
 </section>
-  <section class="container" id="lead-form">
+
+<section class="container" id="lead-form">
   <h2 style="margin-bottom:36px;text-align:center">Get Best Price & Brochure</h2>
 
   <div class="card reveal" style="max-width:520px;margin:0 auto">
     <form action="https://formsubmit.co/Ravi2009u@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
 
-      <input type="text" name="name" placeholder="Full Name" required
-        style="width:100%;margin-bottom:14px;padding:14px;border-radius:12px;background:#000;border:1px solid var(--border);color:var(--text)">
-
-      <input type="tel" name="phone" placeholder="Phone Number" required
-        style="width:100%;margin-bottom:14px;padding:14px;border-radius:12px;background:#000;border:1px solid var(--border);color:var(--text)">
-
-      <input type="email" name="email" placeholder="Email Address" required
-        style="width:100%;margin-bottom:18px;padding:14px;border-radius:12px;background:#000;border:1px solid var(--border);color:var(--text)">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
 
       <button class="btn" type="submit" style="width:100%">Submit</button>
     </form>
@@ -409,6 +401,7 @@
     </a>
   </div>
 </section>
+
 <footer id="contact">
   <div class="container">
     <strong>TRIDENT HILLS</strong>
@@ -427,9 +420,9 @@
 
       <div>
         <h4>Contact</h4>
+        <a href="#lead-form">📩 Get Best Price & Brochure</a><br>
         <a href="tel:8102253186">📞 8102253186</a><br>
-        <a href="mailto:Ravi2009u@gmail.com">✉ Ravi2009u@gmail.com</a><br>
-        <p>📍 Panchkula, Haryana</p>
+        <a href="mailto:Ravi2009u@gmail.com">✉ Ravi2009u@gmail.com</a>
       </div>
 
       <div>
@@ -445,8 +438,7 @@
   </div>
 </footer>
 
-<a class="call-fab" href="tel:8102253186"><i class="fas fa-phone"></i></a>
-
+<a class="call-fab" href="#lead-form"><i class="fas fa-phone"></i></a>
 
 <script>
   function openMenu(){
@@ -475,7 +467,8 @@
 
   document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))
 </script>
-  <div class="popup" id="popup">
+
+<div class="popup" id="popup">
   <div class="popup-box">
     <span class="close" onclick="closePopup()">✕</span>
 
@@ -483,11 +476,9 @@
 
     <form action="https://formsubmit.co/Ravi2009u@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
-
       <input type="text" name="name" placeholder="Full Name" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
       <input type="email" name="email" placeholder="Email Address" required>
-
       <button class="btn" type="submit" style="width:100%">Submit</button>
     </form>
 
