@@ -466,12 +466,23 @@
 </div>
 
 <script>
-  function openMenu(){document.getElementById('menu').style.display='flex'}
-  function closeMenu(){document.getElementById('menu').style.display='none'}
-  function openPopup(){document.getElementById('popup').style.display='flex'}
-  function closePopup(){document.getElementById('popup').style.display='none'}
+  function openMenu(){
+    document.getElementById('menu').style.display='flex'
+  }
 
-  const observer=new IntersectionObserver(entries=>{
+  function closeMenu(){
+    document.getElementById('menu').style.display='none'
+  }
+
+  function openPopup(){
+    document.getElementById('popup').style.display='flex'
+  }
+
+  function closePopup(){
+    document.getElementById('popup').style.display='none'
+  }
+
+  const observer = new IntersectionObserver(entries=>{
     entries.forEach(e=>{
       if(e.isIntersecting){
         e.target.classList.add('show')
