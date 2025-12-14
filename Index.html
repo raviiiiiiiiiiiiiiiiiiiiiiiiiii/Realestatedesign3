@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Trident Hills – Premium Residences</title>
+
+  <!-- META -->
+  <meta name="description" content="Trident Hills premium residences in Panchkula. Low-density luxury living with modern amenities, excellent connectivity and long-term investment value.">
+  <meta name="keywords" content="Trident Hills, Panchkula real estate, luxury residences, 3 BHK, 4 BHK, premium homes">
+  <meta name="author" content="Trident Hills">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#07070b;
+      --card:#0e0e17;
+      --border:#1c1c2b;
+      --text:#e6e6f0;
+      --muted:#9a9ab5;
+      --accent:#7c3aed;
+      --accent-glow:0 0 30px rgba(124,58,237,.45);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family:Inter,system-ui;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{
+      max-width:1150px;
+      margin:auto;
+      padding:0 18px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(7,7,11,.8);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:64px;
+    }
+
+    .logo{
+      font-weight:700;
+      letter-spacing:.5px;
+    }
+
+    .menu-btn{
+      font-size:22px;
+      cursor:pointer;
+    }
+
+    .overlay{
+      position:fixed;
+      inset:0;
+      background:rgba(7,7,11,.95);
+      display:none;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      gap:28px;
+      z-index:100;
+    }
+
+    .overlay a{
+      font-size:20px;
+      font-weight:500;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 26px;
+      border-radius:14px;
+      background:var(--accent);
+      box-shadow:var(--accent-glow);
+      font-weight:600;
+      border:none;
+      cursor:pointer;
+    }
+
+    section{padding:90px 0}
+
+    .hero{
+      padding-top:120px;
+      text-align:center;
+    }
+
+    .hero h1{
+      font-size:42px;
+      max-width:760px;
+      margin:0 auto 18px;
+      line-height:1.2;
+    }
+
+    .hero p{
+      max-width:620px;
+      margin:0 auto 30px;
+      color:var(--muted);
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:26px;
+    }
+
+    .card h3{margin-bottom:10px}
+    .card p{color:var(--muted);font-size:14px}
+
+    .video-wrap{
+      position:relative;
+      padding-top:56.25%;
+      border-radius:22px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#000;
+    }
+
+    .video-wrap iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+
+    .stats{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:24px;
+      margin-top:40px;
+    }
+
+    .stat{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:22px;
+      text-align:center;
+    }
+
+    .stat strong{
+      font-size:28px;
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .faq details{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    .faq details summary{
+      cursor:pointer;
+      font-weight:500;
+    }
+
+    .faq details p{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .map iframe{
+      width:100%;
+      height:380px;
+      border-radius:22px;
+      border:1px solid var(--border);
+    }
+
+    footer{
+      padding:70px 0;
+      border-top:1px solid var(--border);
+    }
+
+    footer .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:32px;
+      margin-top:40px;
+    }
+
+    footer h4{margin-bottom:12px}
+    footer p,footer a{font-size:14px;color:var(--muted)}
+
+    .call-fab{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:var(--accent);
+      box-shadow:var(--accent-glow);
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:60;
+    }
+
+    .popup{
+      position:fixed;
+      inset:0;
+      background:rgba(0,0,0,.6);
+      display:none;
+      align-items:center;
+      justify-content:center;
+      z-index:80;
+    }
+
+    .popup-box{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:22px;
+      padding:28px;
+      max-width:420px;
+      width:100%;
+    }
+
+    .popup-box input{
+      width:100%;
+      padding:12px 14px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:#000;
+      color:var(--text);
+      margin-bottom:12px;
+    }
+
+    .close{
+      float:right;
+      cursor:pointer;
+      color:var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="logo">TRIDENT HILLS</div>
+    <div class="menu-btn" onclick="openMenu()"><i class="fas fa-bars"></i></div>
+  </div>
+</header>
+
+<div class="overlay" id="menu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#highlights" onclick="closeMenu()">Highlights</a>
+  <a href="#location" onclick="closeMenu()">Location</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<section class="hero container">
+  <h1>Premium Low-Density Residences Designed for Elevated Living</h1>
+  <p>Trident Hills offers thoughtfully planned luxury homes in Panchkula, combining privacy, green surroundings, and long-term investment value.</p>
+  <button class="btn" onclick="openPopup()">Get Best Price</button>
+</section>
+
+<section class="container">
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><strong>200+</strong> Acres Development</div>
+    <div class="stat"><strong>Low Density</strong> One Residence Per Floor</div>
+    <div class="stat"><strong>Premium</strong> 3 & 4 BHK Homes</div>
+    <div class="stat"><strong>Trusted</strong> RERA Registered</div>
+  </div>
+</section>
+
+<section id="about" class="container">
+  <div class="cards">
+    <div class="card">
+      <h3>About the Project</h3>
+      <p>Trident Hills is crafted for families seeking peace, exclusivity, and modern urban comfort. The project focuses on space optimization, natural light, and premium finishes.</p>
+    </div>
+    <div class="card">
+      <h3>Investment Perspective</h3>
+      <p>Strategically located in Panchkula with strong appreciation potential, excellent infrastructure, and future-ready connectivity.</p>
+    </div>
+  </div>
+</section>
+
+<section id="highlights" class="container">
+  <h2 style="margin-bottom:30px">Project Highlights</h2>
+  <div class="cards">
+    <div class="card"><p>Low-density planning ensuring privacy and exclusivity.</p></div>
+    <div class="card"><p>Modern clubhouse, landscaped greens, and wellness amenities.</p></div>
+    <div class="card"><p>Smart infrastructure with power backup and security systems.</p></div>
+  </div>
+</section>
+
+<section id="location" class="container">
+  <h2 style="margin-bottom:30px">Location Advantages</h2>
+  <div class="cards">
+    <div class="card"><p>Excellent connectivity to Chandigarh, IT parks, and highways.</p></div>
+    <div class="card"><p>Close proximity to schools, hospitals, and retail hubs.</p></div>
+    <div class="card"><p>Surrounded by green belts and low congestion zones.</p></div>
+  </div>
+
+  <div class="map" style="margin-top:40px">
+    <iframe src="https://www.google.com/maps?q=Panchkula,Haryana&output=embed"></iframe>
+  </div>
+</section>
+
+<section class="container faq">
+  <h2 style="margin-bottom:30px">Frequently Asked Questions</h2>
+  <details><summary>Is Trident Hills RERA registered?</summary><p>Yes, the project is RERA compliant.</p></details>
+  <details><summary>What configurations are available?</summary><p>Premium 3 and 4 BHK residences.</p></details>
+  <details><summary>Is site visit available?</summary><p>Yes, guided site visits can be scheduled.</p></details>
+</section>
+
+<footer class="container" id="contact">
+  <strong>TRIDENT HILLS</strong>
+  <p style="max-width:520px;margin-top:10px">
+    Premium residences designed for modern families seeking long-term value and refined living.
+  </p>
+
+  <div class="grid">
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#about">About</a><br>
+      <a href="#highlights">Highlights</a><br>
+      <a href="#location">Location</a>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>📞 8102253186</p>
+      <p>✉ Ravi2009u@gmail.com</p>
+      <p>📍 Panchkula, Haryana</p>
+    </div>
+
+    <div>
+      <h4>Legal</h4>
+      <p>RERA Registered</p>
+      <p>Terms & Conditions Apply</p>
+    </div>
+  </div>
+
+  <p style="margin-top:40px;font-size:12px;color:var(--muted)">
+    Disclaimer: This website is for informational purposes only and does not constitute an offer or solicitation.
+  </p>
+</footer>
+
+<a class="call-fab" href="tel:8102253186"><i class="fas fa-phone"></i></a>
+
+<div class="popup" id="popup">
+  <div class="popup-box">
+    <span class="close" onclick="closePopup()">✕</span>
+    <h3>Get Best Price & Brochure</h3>
+    <form action="https://formsubmit.co/Ravi2009u@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+    <a style="display:block;margin-top:14px;color:var(--accent)" 
+       href="https://wa.me/918102253186?text=Hi%20I%20am%20interested%20in%20Trident%20Hills">
+       Get Details on WhatsApp →
+    </a>
+  </div>
+</div>
+
+<script>
+  function openMenu(){document.getElementById('menu').style.display='flex'}
+  function closeMenu(){document.getElementById('menu').style.display='none'}
+  function openPopup(){document.getElementById('popup').style.display='flex'}
+  function closePopup(){document.getElementById('popup').style.display='none'}
+</script>
+
+</body>
+</html>
