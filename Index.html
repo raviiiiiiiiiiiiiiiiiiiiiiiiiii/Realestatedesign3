@@ -280,45 +280,30 @@
 
     .close{float:right;cursor:pointer;color:var(--muted)}
 
-    /* FORM UI FIX ONLY (SCOPED) */
+    /* FORM UI FIX (SQUARE TEXT FIELDS) */
     #lead-form form input,
     #popup form input{
       height:56px;
-      padding:22px 18px 12px;
-      border-radius:28px;
+      padding:0 18px;
+      border-radius:16px;
       background:#0b0b13;
-      border:1px solid var(--border);
+      border:1px solid #2a2a3a;
+      color:var(--text);
       font-size:15px;
-      transition:padding .2s ease,border-color .2s ease,box-shadow .2s ease;
+      line-height:56px;
+      box-shadow:none;
     }
 
     #lead-form form input::placeholder,
     #popup form input::placeholder{
-      color:var(--muted);
-      transition:transform .2s ease,font-size .2s ease,opacity .2s ease;
-    }
-
-    #lead-form form input:focus::placeholder,
-    #popup form input:focus::placeholder,
-    #lead-form form input:not(:placeholder-shown)::placeholder,
-    #popup form input:not(:placeholder-shown)::placeholder{
-      transform:translateY(-10px);
-      font-size:12px;
-      opacity:.9;
+      color:#8b8b9f;
     }
 
     #lead-form form input:focus,
     #popup form input:focus{
+      outline:none;
       border-color:var(--accent);
       box-shadow:0 0 0 1px rgba(124,58,237,.35);
-      padding:18px 18px 16px;
-    }
-
-    #lead-form form button,
-    #popup form button{
-      height:56px;
-      border-radius:28px;
-      font-size:15px;
     }
   </style>
 </head>
