@@ -5,15 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Trident Hills – Premium Residences</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Trident Hills premium residences in Panchkula. Low-density luxury homes with modern amenities and strong investment value.">
-  <meta name="keywords" content="Trident Hills, Panchkula luxury homes, premium residences, 3 BHK, 4 BHK">
-  <meta name="author" content="Trident Hills">
-
-  <!-- FONT -->
+  <!-- FONT + ICONS -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- ICONS -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
   <style>
@@ -35,33 +28,32 @@
       line-height:1.65;
     }
 
-    a{color:inherit;text-decoration:none}
+    a{text-decoration:none;color:inherit}
     img{max-width:100%;display:block}
 
     .container{
-      max-width:1150px;
+      max-width:1100px;
       margin:auto;
       padding:0 18px;
+      text-align:center;
     }
 
-    /* NAV */
+    /* HEADER */
     header{
       position:sticky;
       top:0;
       z-index:50;
-      background:rgba(7,7,11,.85);
+      background:rgba(7,7,11,.9);
       backdrop-filter:blur(10px);
       border-bottom:1px solid var(--border);
     }
-
     .nav{
       height:64px;
       display:flex;
       align-items:center;
       justify-content:space-between;
     }
-
-    .logo{font-weight:700;letter-spacing:.5px}
+    .logo{font-weight:700}
     .menu-btn{font-size:22px;cursor:pointer}
 
     .overlay{
@@ -75,45 +67,39 @@
       gap:28px;
       z-index:100;
     }
-
     .overlay a{font-size:20px;font-weight:500}
 
-    /* BUTTON */
-    .btn{
-      display:inline-block;
-      padding:14px 28px;
-      border-radius:14px;
-      background:var(--accent);
-      box-shadow:var(--glow);
-      font-weight:600;
-      border:none;
-      cursor:pointer;
+    /* GLOBAL SPACING FIX */
+    section{
+      padding:120px 0;
     }
 
-    section{padding:96px 0}
+    h2{
+      margin-bottom:40px;
+      font-size:28px;
+    }
 
-    /* HERO */
+    /* HERO FIX */
     .hero{
-      padding-top:120px;
-      text-align:center;
+      padding-top:80px; /* FIXED empty space issue */
     }
 
     .hero h1{
-      font-size:38px;
-      max-width:720px;
-      margin:0 auto 14px;
+      font-size:40px;
+      max-width:760px;
+      margin:0 auto 18px;
       line-height:1.2;
     }
 
     .hero p{
       max-width:620px;
-      margin:0 auto 36px;
+      margin:0 auto 48px;
       color:var(--muted);
     }
 
     .video-wrap{
       max-width:900px;
-      margin:0 auto 40px;
+      margin:0 auto 56px;
       position:relative;
       padding-top:56.25%;
       border-radius:24px;
@@ -130,67 +116,90 @@
       border:0;
     }
 
+    .btn{
+      padding:14px 32px;
+      border-radius:14px;
+      background:var(--accent);
+      box-shadow:var(--glow);
+      font-weight:600;
+      border:none;
+      cursor:pointer;
+    }
+
     /* CARDS */
     .cards{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
       gap:28px;
+      margin-bottom:20px;
     }
 
     .card{
       background:var(--card);
       border:1px solid var(--border);
       border-radius:22px;
-      padding:28px;
+      padding:30px;
       opacity:0;
       transform:translateY(30px);
       transition:.6s ease;
+      text-align:left;
     }
 
-    .card.show{opacity:1;transform:translateY(0)}
+    .card.show{
+      opacity:1;
+      transform:translateY(0);
+    }
 
-    .card h3{margin-bottom:10px;font-size:18px}
     .card p{color:var(--muted);font-size:14px}
 
     /* STATS */
     .stats{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:28px;
-      margin-top:60px;
+      gap:32px;
+      margin-top:80px; /* FIX spacing */
     }
 
     .stat{
       background:var(--card);
       border:1px solid var(--border);
       border-radius:22px;
-      padding:26px;
-      text-align:center;
+      padding:30px;
       opacity:0;
       transform:translateY(30px);
       transition:.6s ease;
     }
 
-    .stat.show{opacity:1;transform:translateY(0)}
+    .stat.show{
+      opacity:1;
+      transform:translateY(0);
+    }
 
     .stat strong{
-      font-size:28px;
+      font-size:30px;
       display:block;
       margin-bottom:6px;
     }
 
-    /* GALLERY */
+    /* GALLERY FIX (CENTERED) */
+    #gallery{
+      padding-top:140px;
+    }
+
     .gallery{
+      max-width:1000px;
+      margin:0 auto;
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-      gap:24px;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:28px;
     }
 
     .gallery img{
-      border-radius:22px;
-      border:1px solid var(--border);
-      height:220px;
+      width:100%;
+      height:240px;
       object-fit:cover;
+      border-radius:26px;
+      border:1px solid var(--border);
       opacity:0;
       transform:translateY(30px);
       transition:.6s ease;
@@ -203,45 +212,36 @@
 
     /* FAQ */
     .faq{
-      display:grid;
-      gap:18px;
       max-width:900px;
-      margin:auto;
+      margin:0 auto;
+      display:grid;
+      gap:20px;
+      text-align:left;
     }
 
     .faq details{
       background:var(--card);
       border:1px solid var(--border);
       border-radius:18px;
-      padding:20px;
+      padding:22px;
     }
 
-    .faq summary{cursor:pointer;font-weight:500}
-    .faq p{margin-top:10px;color:var(--muted);font-size:14px}
-
-    /* MAP */
-    .map iframe{
-      width:100%;
-      height:380px;
-      border-radius:24px;
-      border:1px solid var(--border);
-      margin-top:48px;
-    }
+    .faq p{margin-top:10px;color:var(--muted)}
 
     /* FOOTER */
     footer{
-      padding:80px 0;
+      padding:140px 0 80px;
       border-top:1px solid var(--border);
+      text-align:left;
     }
 
     footer .grid{
       display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:36px;
-      margin-top:36px;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:40px;
+      margin-top:40px;
     }
 
-    footer h4{margin-bottom:12px}
     footer p,footer a{font-size:14px;color:var(--muted)}
     footer a:hover{color:var(--text)}
 
@@ -261,37 +261,6 @@
       z-index:60;
     }
 
-    /* POPUP */
-    .popup{
-      position:fixed;
-      inset:0;
-      background:rgba(0,0,0,.65);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      z-index:80;
-    }
-
-    .popup-box{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:24px;
-      padding:30px;
-      max-width:420px;
-      width:100%;
-    }
-
-    .popup-box input{
-      width:100%;
-      padding:12px 14px;
-      border-radius:12px;
-      border:1px solid var(--border);
-      background:#000;
-      color:var(--text);
-      margin-bottom:14px;
-    }
-
-    .close{float:right;cursor:pointer;color:var(--muted)}
   </style>
 </head>
 <body>
@@ -299,16 +268,16 @@
 <header>
   <div class="container nav">
     <div class="logo">TRIDENT HILLS</div>
-    <div class="menu-btn" onclick="openMenu()"><i class="fas fa-bars"></i></div>
+    <div class="menu-btn" onclick="menu.style.display='flex'"><i class="fas fa-bars"></i></div>
   </div>
 </header>
 
 <div class="overlay" id="menu">
-  <a href="#about" onclick="closeMenu()">About</a>
-  <a href="#highlights" onclick="closeMenu()">Highlights</a>
-  <a href="#gallery" onclick="closeMenu()">Gallery</a>
-  <a href="#location" onclick="closeMenu()">Location</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
+  <a href="#about" onclick="menu.style.display='none'">About</a>
+  <a href="#highlights" onclick="menu.style.display='none'">Highlights</a>
+  <a href="#gallery" onclick="menu.style.display='none'">Gallery</a>
+  <a href="#location" onclick="menu.style.display='none'">Location</a>
+  <a href="#contact" onclick="menu.style.display='none'">Contact</a>
 </div>
 
 <section class="hero container">
@@ -319,31 +288,25 @@
     <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
   </div>
 
-  <button class="btn" onclick="openPopup()">Get Best Price</button>
+  <button class="btn">Get Best Price</button>
 </section>
 
 <section id="about" class="container">
+  <h2>About Trident Hills</h2>
   <div class="cards">
-    <div class="card reveal">
-      <h3>About Trident Hills</h3>
-      <p>A premium residential development focused on space, exclusivity and modern urban comfort.</p>
-    </div>
-    <div class="card reveal">
-      <h3>Investment Value</h3>
-      <p>Strong appreciation potential driven by location, infrastructure and future-ready planning.</p>
-    </div>
+    <div class="card reveal"><p>A premium residential development focused on space, exclusivity and modern urban comfort.</p></div>
+    <div class="card reveal"><p>Designed to offer peaceful living with strong appreciation potential.</p></div>
   </div>
 
   <div class="stats">
     <div class="stat reveal"><strong>200+</strong> Acres Development</div>
     <div class="stat reveal"><strong>Low Density</strong> One Residence Per Floor</div>
-    <div class="stat reveal"><strong>Premium</strong> 3 & 4 BHK Homes</div>
-    <div class="stat reveal"><strong>RERA</strong> Registered</div>
+    <div class="stat reveal"><strong>RERA</strong> Registered Project</div>
   </div>
 </section>
 
 <section id="highlights" class="container">
-  <h2 style="margin-bottom:36px">Project Highlights</h2>
+  <h2>Project Highlights</h2>
   <div class="cards">
     <div class="card reveal"><p>Low-density planning ensuring privacy and peaceful living.</p></div>
     <div class="card reveal"><p>Modern amenities including clubhouse, wellness zones and landscaped greens.</p></div>
@@ -352,106 +315,55 @@
 </section>
 
 <section id="gallery" class="container">
-  <h2 style="margin-bottom:36px">Project Gallery</h2>
+  <h2>Project Gallery</h2>
   <div class="gallery">
-    <img class="reveal" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="">
-    <img class="reveal" src="https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=80" alt="">
-    <img class="reveal" src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80" alt="">
-    <img class="reveal" src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=1200&q=80" alt="">
-    <img class="reveal" src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80" alt="">
-    <img class="reveal" src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80" alt="">
+    <img class="reveal" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
+    <img class="reveal" src="https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=80">
+    <img class="reveal" src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80">
   </div>
 </section>
 
 <section id="location" class="container">
-  <h2 style="margin-bottom:36px">Location Advantages</h2>
+  <h2>Location Advantages</h2>
   <div class="cards">
-    <div class="card reveal"><p>Excellent connectivity to Chandigarh, IT parks and major highways.</p></div>
-    <div class="card reveal"><p>Close to reputed schools, hospitals and retail destinations.</p></div>
+    <div class="card reveal"><p>Excellent connectivity to Chandigarh and major highways.</p></div>
+    <div class="card reveal"><p>Close to schools, hospitals and daily conveniences.</p></div>
     <div class="card reveal"><p>Surrounded by green belts and low-congestion zones.</p></div>
-  </div>
-
-  <div class="map">
-    <iframe src="https://www.google.com/maps?q=Panchkula,Haryana&output=embed"></iframe>
-  </div>
-</section>
-
-<section class="container">
-  <h2 style="margin-bottom:36px;text-align:center">Frequently Asked Questions</h2>
-  <div class="faq">
-    <details><summary>Is Trident Hills RERA registered?</summary><p>Yes, the project is fully RERA compliant.</p></details>
-    <details><summary>What configurations are available?</summary><p>Premium 3 BHK and 4 BHK residences.</p></details>
-    <details><summary>Can I schedule a site visit?</summary><p>Yes, guided site visits are available.</p></details>
   </div>
 </section>
 
 <footer id="contact">
   <div class="container">
     <strong>TRIDENT HILLS</strong>
-    <p style="max-width:520px;margin-top:10px">
+    <p style="margin-top:10px;max-width:520px">
       Premium residences crafted for families seeking refined living and long-term value.
     </p>
 
     <div class="grid">
       <div>
-        <h4>Quick Links</h4>
-        <a href="#about">About Project</a><br>
+        <strong>Quick Links</strong><br><br>
+        <a href="#about">About</a><br>
         <a href="#highlights">Highlights</a><br>
         <a href="#gallery">Gallery</a><br>
         <a href="#location">Location</a>
       </div>
 
       <div>
-        <h4>Contact</h4>
+        <strong>Contact</strong><br><br>
         <a href="tel:8102253186">📞 8102253186</a><br>
         <a href="mailto:Ravi2009u@gmail.com">✉ Ravi2009u@gmail.com</a><br>
         <p>📍 Panchkula, Haryana</p>
       </div>
-
-      <div>
-        <h4>Legal</h4>
-        <p>RERA Registered Project</p>
-        <p>Terms & Conditions Apply</p>
-      </div>
     </div>
-
-    <p style="margin-top:40px;font-size:12px;color:var(--muted)">
-      Disclaimer: This website is for informational purposes only and does not constitute an offer or solicitation.
-    </p>
   </div>
 </footer>
 
 <a class="call-fab" href="tel:8102253186"><i class="fas fa-phone"></i></a>
 
-<div class="popup" id="popup">
-  <div class="popup-box">
-    <span class="close" onclick="closePopup()">✕</span>
-    <h3>Get Best Price & Brochure</h3>
-    <form action="https://formsubmit.co/Ravi2009u@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="tel" name="phone" placeholder="Phone Number" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <button class="btn" type="submit">Submit</button>
-    </form>
-    <a style="display:block;margin-top:16px;color:var(--accent)"
-       href="https://wa.me/918102253186?text=Hi%20I%20am%20interested%20in%20Trident%20Hills">
-       Get details on WhatsApp →
-    </a>
-  </div>
-</div>
-
 <script>
-  function openMenu(){document.getElementById('menu').style.display='flex'}
-  function closeMenu(){document.getElementById('menu').style.display='none'}
-  function openPopup(){document.getElementById('popup').style.display='flex'}
-  function closePopup(){document.getElementById('popup').style.display='none'}
-
   const observer=new IntersectionObserver(entries=>{
     entries.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.classList.add('show')
-      }
+      if(e.isIntersecting)e.target.classList.add('show')
     })
   },{threshold:.15})
 
