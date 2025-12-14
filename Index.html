@@ -44,6 +44,7 @@
       padding:0 18px;
     }
 
+    /* NAV */
     header{
       position:sticky;
       top:0;
@@ -77,6 +78,7 @@
 
     .overlay a{font-size:20px;font-weight:500}
 
+    /* BUTTON */
     .btn{
       display:inline-block;
       padding:14px 28px;
@@ -90,6 +92,7 @@
 
     section{padding:80px 0}
 
+    /* HERO */
     .hero{
       padding-top:90px;
       text-align:center;
@@ -127,6 +130,7 @@
       border:0;
     }
 
+    /* SECTION SPACING */
     #about{margin-top:60px}
     #highlights{margin-top:90px}
     #gallery{margin-top:100px}
@@ -136,6 +140,7 @@
 
     h2{margin-bottom:42px}
 
+    /* CARDS */
     .cards{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -158,6 +163,7 @@
     .card h3{margin-bottom:12px;font-size:18px}
     .card p{color:var(--muted);font-size:14px}
 
+    /* STATS */
     .stats{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -184,6 +190,7 @@
       margin-bottom:6px;
     }
 
+    /* GALLERY */
     .gallery{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -207,6 +214,7 @@
       transform:translateY(0);
     }
 
+    /* MAP */
     .map{
       margin-top:70px;
     }
@@ -218,6 +226,7 @@
       border:1px solid var(--border);
     }
 
+    /* FOOTER */
     footer{
       padding:80px 0;
       border-top:1px solid var(--border);
@@ -234,6 +243,7 @@
     footer p,footer a{font-size:14px;color:var(--muted)}
     footer a:hover{color:var(--text)}
 
+    /* FLOAT CALL */
     .call-fab{
       position:fixed;
       bottom:20px;
@@ -249,6 +259,7 @@
       z-index:60;
     }
 
+    /* POPUP */
     .popup{
       position:fixed;
       inset:0;
@@ -282,16 +293,10 @@
 
     #lead-form form input,
     #popup form input{
-      width:100%;
-      padding:14px 16px;
+      background:#09090f;
       border-radius:14px;
-      border:1px solid var(--border);
-      background:#0b0b13;
-      color:var(--text);
       font-size:14px;
-      margin-bottom:16px;
-      outline:none;
-      transition:border-color .25s ease, box-shadow .25s ease;
+      transition:border-color .2s ease, box-shadow .2s ease;
     }
 
     #lead-form form input:focus,
@@ -302,9 +307,8 @@
 
     #lead-form form button,
     #popup form button{
-      width:100%;
-      padding:16px;
       border-radius:16px;
+      padding:16px;
       font-size:15px;
     }
   </style>
@@ -337,33 +341,160 @@
   <button class="btn" onclick="openPopup()">Get Best Price</button>
 </section>
 
+<section id="about" class="container">
+  <h2>About Trident Hills</h2>
+
+  <div class="cards">
+    <div class="card reveal">
+      <h3>Designed for Premium Living</h3>
+      <p>
+        Trident Hills is a thoughtfully planned residential development that prioritizes space,
+        privacy, and comfort. With low-density planning and expansive green zones, it offers a
+        refined lifestyle away from congestion.
+      </p>
+    </div>
+
+    <div class="card reveal">
+      <h3>Strong Investment Potential</h3>
+      <p>
+        Strategically located in Panchkula, the project benefits from rapid infrastructure growth,
+        limited inventory, and premium demand—making it ideal for both end-users and investors.
+      </p>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat reveal"><strong>200+</strong> Acres Development</div>
+    <div class="stat reveal"><strong>Low Density</strong> One Residence Per Floor</div>
+    <div class="stat reveal"><strong>Premium</strong> 3 & 4 BHK Homes</div>
+    <div class="stat reveal"><strong>RERA</strong> Registered</div>
+  </div>
+</section>
+
+<section id="highlights" class="container">
+  <h2>Project Highlights</h2>
+  <div class="cards">
+    <div class="card reveal"><p>Low-density planning ensuring peace, privacy, and exclusivity.</p></div>
+    <div class="card reveal"><p>Clubhouse, wellness zones, landscaped greens, and lifestyle amenities.</p></div>
+    <div class="card reveal"><p>High-end security systems, power backup, and smart infrastructure.</p></div>
+  </div>
+</section>
+
+<section id="gallery" class="container">
+  <h2>Project Gallery</h2>
+  <div class="gallery">
+    <img class="reveal" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80">
+    <img class="reveal" src="https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=80">
+    <img class="reveal" src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80">
+  </div>
+</section>
+
+<section id="location" class="container">
+  <h2>Location Advantages</h2>
+  <div class="cards">
+    <div class="card reveal"><p>Seamless connectivity to Chandigarh and major highways.</p></div>
+    <div class="card reveal"><p>Close proximity to schools, hospitals, and daily conveniences.</p></div>
+    <div class="card reveal"><p>Surrounded by green belts and low-congestion neighborhoods.</p></div>
+  </div>
+
+  <div class="map">
+    <iframe src="https://www.google.com/maps?q=Panchkula,Haryana&output=embed"></iframe>
+  </div>
+</section>
+
 <section class="container" id="lead-form">
   <h2 style="margin-bottom:36px;text-align:center">Get Best Price & Brochure</h2>
 
   <div class="card reveal" style="max-width:520px;margin:0 auto">
     <form action="https://formsubmit.co/Ravi2009u@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
+
       <input type="text" name="name" placeholder="Full Name" required>
       <input type="tel" name="phone" placeholder="Phone Number" required>
       <input type="email" name="email" placeholder="Email Address" required>
+
       <button class="btn" type="submit" style="width:100%">Submit</button>
     </form>
+
+    <a href="https://wa.me/918102253186?text=Hi%20I%20am%20interested%20in%20Trident%20Hills"
+       style="display:block;margin-top:18px;text-align:center;color:var(--accent)">
+      Or get details on WhatsApp →
+    </a>
   </div>
 </section>
+
+<footer id="contact">
+  <div class="container">
+    <strong>TRIDENT HILLS</strong>
+    <p style="max-width:520px;margin-top:10px">
+      Premium residences crafted for families seeking refined living and long-term value.
+    </p>
+
+    <div class="grid">
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#about">About Project</a><br>
+        <a href="#highlights">Highlights</a><br>
+        <a href="#gallery">Gallery</a><br>
+        <a href="#location">Location</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <a href="#lead-form">📩 Get Best Price & Brochure</a><br>
+        <a href="tel:8102253186">📞 8102253186</a><br>
+        <a href="mailto:Ravi2009u@gmail.com">✉ Ravi2009u@gmail.com</a>
+      </div>
+
+      <div>
+        <h4>Legal</h4>
+        <p>RERA Registered Project</p>
+        <p>Terms & Conditions Apply</p>
+      </div>
+    </div>
+
+    <p style="margin-top:40px;font-size:12px;color:var(--muted)">
+      Disclaimer: This website is for informational purposes only and does not constitute an offer or solicitation.
+    </p>
+  </div>
+</footer>
 
 <a class="call-fab" href="#lead-form"><i class="fas fa-phone"></i></a>
 
 <script>
-  function openMenu(){document.getElementById('menu').style.display='flex'}
-  function closeMenu(){document.getElementById('menu').style.display='none'}
-  function openPopup(){document.getElementById('popup').style.display='flex'}
-  function closePopup(){document.getElementById('popup').style.display='none'}
+  function openMenu(){
+    document.getElementById('menu').style.display='flex'
+  }
+
+  function closeMenu(){
+    document.getElementById('menu').style.display='none'
+  }
+
+  function openPopup(){
+    document.getElementById('popup').style.display='flex'
+  }
+
+  function closePopup(){
+    document.getElementById('popup').style.display='none'
+  }
+
+  const observer = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('show')
+      }
+    })
+  },{threshold:.15})
+
+  document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))
 </script>
 
 <div class="popup" id="popup">
   <div class="popup-box">
     <span class="close" onclick="closePopup()">✕</span>
+
     <h3 style="margin-bottom:18px">Get Best Price & Brochure</h3>
+
     <form action="https://formsubmit.co/Ravi2009u@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="text" name="name" placeholder="Full Name" required>
@@ -371,6 +502,11 @@
       <input type="email" name="email" placeholder="Email Address" required>
       <button class="btn" type="submit" style="width:100%">Submit</button>
     </form>
+
+    <a href="https://wa.me/918102253186?text=Hi%20I%20am%20interested%20in%20Trident%20Hills"
+       style="display:block;margin-top:14px;color:var(--accent)">
+      Get details on WhatsApp →
+    </a>
   </div>
 </div>
 
